@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-success bg-opacity-25">
+    <main>
+        <section class="container py-5">
+            <h2>Quản Lý Tuyển Sinh</h2>
+            <p class="diemChuan"> Điểm chuẩn là : 28</p>
+            <div class="mb-3">
+                <label for="" class="form-label">Điểm môn thứ 1: </label>
+                <input type="number" class="form-control" style="width: 30%;" id="monToan" placeholder="Điểm môn toán">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Điểm môn thứ 2: </label>
+                <input type="number" class="form-control" style="width: 30%;" id="monVan" placeholder="Điểm môn văn">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Điểm môn thứ 3: </label>
+                <input type="number" class="form-control" style="width: 30%;" id="monHoa" placeholder="Điểm môn hóa">
+            </div>
+            <select name="" class="khuVuc">
+                <option value="" disabled>Chọn khu vực</option>
+                <option value="" id="khuVucA">A</option>
+                <option value="" id="khuVucB">B</option>
+                <option value="" id="khuVucC">C</option>
+            </select>
+            <select name="" class="doiTuong">
+                <option value="" disabled>Chọn đối tượng</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <button class="btn btn-primary" onclick="diemTongBaMon()">Kết Quả</button>
+            <div class="bg-success mt-3 text-black" style="width: 30%;"></div>
+        </section>
+        <section class="container py-5">
+            <h2>Tính Tiền Điện</h2>
+            <div class="mb-3">
+                <label for="" class="form-label">Nhập họ & tên</label>
+                <input type="text" class="form-control" style="width: 30%;" id="" placeholder="Nhập họ tên">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nhập số Kw</label>
+                <input type="number" class="form-control" style="width: 30%;" id="" placeholder="Nhập Số Kw">
+            </div>
+            <button class="btn btn-primary">Tính tiền điện</button>
+        </section>
+        <section class="container py-5">
+            <h2>Tính Thuế Thu Nhập Cá Nhân</h2>
+            <div class="mb-3">
+                <label for="" class="form-label">Nhập họ & tên</label>
+                <input type="text" placeholder="Nhập Họ Tên" id="hoTen">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Tổng Thu nhập</label>
+                <input type="number" placeholder="Thu nhập/năm" id="thuNhapNam">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Số người phụ thuộc</label>
+                <input type="number" placeholder="Số người phụ thuộc" id="nguoiPhuThuoc">
+            </div>
+            <button class="btn btn-primary" onclick="thuNhapSauThue()">Tính tiền thuế</button>
+            <div class="bg-warning bg-opacity-75 text-black-50"></div>
+        </section>
+        <section class="container py-5">
+            <h2>Tính Tiền Cáp</h2>
+            <p class="diemChuan"></p>
+            <select name="chọn loại khách hàng" class="loaiKhachHang">
+                <option value="1">Chọn loại khách hàng</option>
+                <option value="2">Nhà Dân</option>
+                <option value="3">Doanh Nghiệp</option>
+            </select>
+            <select name="chọn đối tượng" class="doiTuong">
+                <option value="1">Số Kênh Cao Cấp</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+                <option value="4">3</option>
+            </select>
+            <div class="mb-3 mt-3">
+                <label for="" class="form-label"> Nhập mã khách hàng :</label>
+                <input type="text" placeholder="nhập mã khách hàng">
+            </div>
+            <button class="btn btn-primary">Tính tiền cáp</button>
+        </section>
+    </main>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
