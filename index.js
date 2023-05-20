@@ -63,7 +63,7 @@ Tính và xuất ra tiền trả theo quy tắc:
     - 150kw kế : 1100đ/kw
     - Còn lại: 1300đ/kw
 */
-const kw = 500;
+// const kw = 500;
 const kw50Ke = 650;
 const kw100Ke = 850;
 const kw150Ke = 1100;
@@ -74,7 +74,9 @@ function tongTienDien() {
     // lấy số kw từ người dùng
     var soKw = document.getElementById("txt-kw").value * 1;
     var soKwBanDau = soKw * soTienTrenKw;
+    console.log(soKwBanDau);
     var soKw50Ke = (soKw - 50) * kw50Ke;
+    console.log(soKw50Ke);
     var soKw100Ke = (soKw - 100) * kw100Ke;
     var soKw200 = (soKw - 200) * kw150Ke;
     var soKwTren350 = (soKw - 350) * kw350TroDi;
@@ -82,18 +84,19 @@ function tongTienDien() {
     // kiểm tra giá trị số kw từ người dùng
     if (soKw >= 1) {
         // tính toán số tiền
-        if (soKw >= 1) {
+        if (soKw > 1 && soKw < 50) {
             tongTienKw = soKwBanDau;
-        } else if (soKw > 50 && soKw <= 100) {
+        } else if (soKw >= 50 && soKw <= 100) {
             tongTienKw = soKw50Ke + (50 * soTienTrenKw);
+            console.log(tongTienKw);
         }
-        else if (soKw > 100 && soKw <= 200) {
+        else if (soKw > 100 && soKw < 200) {
             tongTienKw = soKw100Ke + (50 * soTienTrenKw) + (50 * kw50Ke);
         }
-        else if (soKw > 200 && soKw <= 350) {
+        else if (soKw >= 200 && soKw < 350) {
             tongTienKw = soKw200 + (50 * soTienTrenKw) + (50 * kw50Ke) + (100 * kw100Ke);
         }
-        else if (soKw > 350) {
+        else if (soKw >= 350) {
             tongTienKw = soKwTren350 + (50 * soTienTrenKw) + (50 * kw50Ke) + (100 * kw100Ke) + (150 * kw150Ke);
         }
         document.getElementById("divThanhTien").style.display = "block";
