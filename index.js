@@ -148,7 +148,7 @@ function thuNhapSauThue() {
         }
         else if (nguoiPhuThuoc == 2) {
             soNguoiPhuThuoc = tongThuNhap - haiNguoi;
-        } else if (nguoiPhuThuoc == 3) {
+        } else if (nguoiPhuThuoc >= 3) {
             soNguoiPhuThuoc = tongThuNhap - baNguoi;
         }
         document.getElementById("thueThuNhap").innerHTML = "Họ tên : " + hoTenKH + "," + " Thuế : " + (new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(soNguoiPhuThuoc));
