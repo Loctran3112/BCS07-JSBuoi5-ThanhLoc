@@ -125,18 +125,20 @@
                         <div class="check"></div>
                     </li>
                 </ul>
+                <!-- <input type="number" value="demo" placeholder="kết nối doanh nghiệp" id="demo" class="demo">
+                <label for="demo">Chọn số kết nối</label> -->
                 <div class="mb-3">
-                    <label for="" class="form-label">Chọn loại cáp :</label>
-                    <select class="form-select" name="" id="kenhCaoCap" style="width: 10%;">
-                        <option selected id="xuLyHD">Xử lý Hoạt Động</option>
-                        <option value="" id="dichVuCoBan">Dịch vụ Cơ Bản</option>
-                        <option value="" id="dichVuCaoCap">Cao cấp</option>
+                    <label for="" class="form-label mt-2">Chọn loại cáp :</label>
+                    <select class="form-select" id="kenhCaoCap" style="width: 10%;">
+                        <option value="xuLyHD" id="xuLyHD">Xử lý Hoạt Động</option>
+                        <option value="dichVuCoBan" id="dichVuCoBan">Dịch vụ Cơ Bản</option>
+                        <option value="dichVuCaoCap" id="dichVuCaoCap">Cao cấp</option>
                     </select>
                 </div>
             </div>
             <div class="mb-3 mt-3">
                 <label for="" class="form-label"> Nhập mã khách hàng :</label>
-                <input type="text" placeholder="nhập mã khách hàng">
+                <input type="text" placeholder="nhập mã khách hàng" id="maKhachHang">
             </div>
             <button class="btn btn-primary" onclick="tongTienCap()">Tính tiền cáp</button>
             <div class="bg-success mt-3 text-black" style="width: 30%;" id="tienCap"></div>

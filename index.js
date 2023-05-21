@@ -201,7 +201,6 @@ function phiCapCaoCap(loaiKH) {
         }
     }
 };
-
 function tongTienCap() {
     // đi lấy dữ liệu từ người dùng
     var maKH = document.getElementById("maKhachHang").value;
@@ -211,18 +210,29 @@ function tongTienCap() {
     var capDVCC = phiCapCaoCap(loaiKH);
 
     // lấy giá trị cáp từ người dùng
-    var kenh = document.querySelector(".kenhCaoCap input[name='selector']:checked").value;
-    // console.log(kenh)
-
+    var kenh = document.getElementById("kenhCaoCap").value;
+    // console.log(kenh);
     var tienCap;
-    if (kenh == khNhaDan) {
-        if (kenh == capXLHD) {
-            tienCap = khNhaDan;
+    if (loaiKH == khNhaDan) {
+        if (kenh == kenhDVXuLyHd) {
+            tienCap = capXLHD;
         }
-        // else if (kenh != 1) {
-        //     tienCap = 15;
-        // }
-        document.getElementById("tienCap").innerHTML = tienCap;
+        else if (kenh == kenhDVCoBan) {
+            tienCap = capCoBan;
+        }
+        else if (kenh == kenhDVCaoCap) {
+            tienCap = capDVCC;
+        }
+    } else if (loaiKH == khDoanhNghiep) {
+        if (kenh == kenhDVXuLyHd) {
+            tienCap = capXLHD;
+        }
+        else if (kenh == kenhDVCoBan) {
+            tienCap = capCoBan;
+        }
+        else if (kenh == kenhDVCaoCap) {
+            tienCap = capDVCC;
+        }
     }
-    document.getElementById("tienCap").innerHTML = " Mã khách hàng : " + maKH + ", tiền cáp : " + tienCap;
+    document.getElementById("tienCap").innerHTML = " Mã khách hàng : " + maKH + ", tiền cáp : " + (new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(tienCap));
 }
